@@ -1,0 +1,78 @@
+.calendar {
+  font-weight: light;
+  color: gray; }
+  .calendar * {
+    box-sizing: border-box; }
+  .calendar .calendar__title {
+    font-size: 20px; }
+  .calendar .calendar__body {
+    margin-top: 30px; }
+  .calendar .calendar__body-title {
+    display: flex;
+    justify-content: flex-start; }
+    .calendar .calendar__body-title div:nth-child(1) {
+      width: 40px; }
+    .calendar .calendar__body-title div:nth-child(2) {
+      text-align: center;
+      text-transform: uppercase;
+      width: 40px;
+      font-size: 15px; }
+    .calendar .calendar__body-title div:nth-child(n+3) {
+      position: relative;
+      width: 60px; }
+      .calendar .calendar__body-title div:nth-child(n+3):after {
+        content: "";
+        display: block;
+        width: 0.5px;
+        height: 15px;
+        background-color: gray;
+        position: absolute;
+        bottom: 0px; }
+  .calendar .calendar__btn {
+    display: inline-block;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 120px;
+    color: white; }
+    .calendar .calendar__btn:hover {
+      background-color: lightgray; }
+  .calendar .day {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 50px; }
+    .calendar .day * {
+      border: 0.3px solid lightgray; }
+    .calendar .day:nth-child(2) .day__name,
+    .calendar .day:nth-child(2) .day__all,
+    .calendar .day:nth-child(2) .day__hours {
+      border-top: 0.3px solid lightgray; }
+    .calendar .day .day__name {
+      border-top: none;
+      text-align: center;
+      line-height: 50px;
+      width: 40px;
+      text-transform: uppercase; }
+    .calendar .day .day__all {
+      border-top: none;
+      border-bottom: 0.3px solid white;
+      border-left: none;
+      width: 40px;
+      background-color: gray; }
+      .calendar .day .day__all:hover {
+        background-color: lightgray; }
+    .calendar .day .day__all.selected {
+      background: gray url(src/img/ico1.svg) center center no-repeat/75%; }
+      .calendar .day .day__all.selected:hover {
+        background-color: lightgray; }
+    .calendar .day .day__hours {
+      border-left: none;
+      border-top: none;
+      width: 20px; }
+    .calendar .day .selected {
+      background-color: lightgray;
+      border-color: white; }
+
+
+/*# sourceMappingURL=style.css.map*/

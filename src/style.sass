@@ -1,0 +1,81 @@
+
+$minWidth: 20px
+
+.calendar
+    font-weight: light
+    color: gray
+    *
+        box-sizing: border-box
+    .calendar__title
+        font-size: 20px
+    .calendar__body
+        margin-top: 30px
+    .calendar__body-title
+        display: flex
+        justify-content: flex-start
+        div  
+            &:nth-child(1)
+                width: $minWidth*2
+            &:nth-child(2)
+                text-align: center
+                text-transform: uppercase
+                width: $minWidth*2
+                font-size: 15px
+            &:nth-child(n+3)
+                position: relative
+                width: $minWidth*3
+                &:after
+                    content: ""
+                    display: block
+                    width: 0.5px
+                    height: 15px
+                    background-color: gray
+                    position: absolute
+                    bottom: 0px
+    .calendar__btn
+        display: inline-block
+        padding: 20px
+        background-color: gray
+        border-radius: 5px
+        margin-top: 30px
+        margin-left: $minWidth*6
+        color: white
+        &:hover
+            background-color: lightgray 
+
+    .day
+        display: flex
+        justify-content: flex-start
+        min-height: 50px 
+        *
+            border: 0.3px solid lightgray   
+        &:nth-child(2)
+            .day__name, 
+            .day__all,
+            .day__hours
+                border-top: 0.3px solid lightgray
+        .day__name
+            border-top: none 
+            text-align: center
+            line-height: 50px
+            width: $minWidth*2
+            text-transform: uppercase      
+        .day__all
+            border-top: none
+            border-bottom: 0.3px solid white
+            border-left: none
+            width: $minWidth*2
+            background-color: gray
+            &:hover
+                background-color: lightgray
+        .day__all.selected
+            background: gray url(./img/ico1.svg) center center no-repeat / 75% 
+            &:hover
+                background-color: lightgray
+        .day__hours
+            border-left: none
+            border-top: none
+            width: $minWidth
+        .selected 
+            background-color: lightgray
+            border-color: white
